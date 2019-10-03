@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SuperHeroReviews.Models;
+using SuperHeroReviews.Repository;
 
 
 namespace SuperHeroReviews.Controllers
@@ -11,7 +13,11 @@ namespace SuperHeroReviews.Controllers
     {
         public ViewResult HeroIndex()
         {
-            return View();
+            HeroRepository heroRepo = new HeroRepository();
+
+            var model = heroRepo.GetAll();
+
+            return View(model);
         }
 
     }
