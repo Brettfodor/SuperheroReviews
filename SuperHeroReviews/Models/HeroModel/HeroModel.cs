@@ -9,10 +9,29 @@ namespace SuperHeroReviews.Models.HeroModel
 {
     public class HeroModel 
     {
-        int ID { get;  set;  }
-        string Name { get; set; }
-        string Image { get; set; }
-        string Review { get; set; }
-        string Content { get; set; }
+        public int ID { get;  set;  }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public string Review { get; set; }
+        public string Content { get; set; }
+
+
+        public HeroModel()
+        {
+
+        }
+
+        public HeroModel(int id, string name)
+        {
+            ID = id;
+            Name = name;
+
+        }
     }
+    
+
+    
+
+   
+
 }
