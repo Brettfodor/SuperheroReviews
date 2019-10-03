@@ -20,12 +20,12 @@ namespace SuperHeroReviews.Controllers
             return View();
         }
 
-        public ViewResult Privacy()
+        public ViewResult DCU()
         {
             return View();
         }
 
-        public ViewResult Contact()
+        public ViewResult MCU()
         {
             return View();
         }

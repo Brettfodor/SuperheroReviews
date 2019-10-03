@@ -3,6 +3,7 @@ using Xunit;
 using Microsoft.AspNetCore.Mvc;
 using SuperHeroReviews.Controllers;
 
+
 namespace SuperHeroReviews.Tests
 {
     public class HomeControllerTests
@@ -16,5 +17,17 @@ namespace SuperHeroReviews.Tests
 
             Assert.IsType<ViewResult>(result);
         }
+
+        [Fact]
+        public void Hero_Returns_ViewResult()
+        {
+            var controller = new HeroController();
+
+            var result = controller.HeroIndex();
+
+            Assert.IsType<ViewResult>(result);
+        }
+
+       
     }
 }
