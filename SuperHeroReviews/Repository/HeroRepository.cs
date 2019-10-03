@@ -15,9 +15,9 @@ namespace SuperHeroReviews.Repository
         {
             heroList = new List<HeroModel>();
 
-            new HeroModel(1, "Machine Learning");
-            new HeroModel(2, "C# for Dummies");
-            new HeroModel(3, "HTML, CSS, JVS");
+            new HeroModel(1, "IronMan");
+            new HeroModel(2, "Flash");
+            new HeroModel(3, "Spiderman");
         }
 
         public IEnumerable<HeroModel> GetAll()
