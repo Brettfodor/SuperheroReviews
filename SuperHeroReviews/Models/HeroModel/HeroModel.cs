@@ -21,7 +21,7 @@ namespace SuperHeroReviews.Models.HeroModel
 
         }
 
-        public HeroModel(int id, string name)
+        public HeroModel(int id, string name )
         {
             ID = id;
             Name = name;
