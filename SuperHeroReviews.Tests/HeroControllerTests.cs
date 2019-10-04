@@ -13,7 +13,7 @@ namespace SuperHeroReviews.Tests
         HeroModel herotest;
         public HeroControllerTests()
         {
-            herotest = new HeroModel(21, "Hero Name");
+            herotest = new HeroModel(21, "Hero Name", "Universe");
         }
 
 

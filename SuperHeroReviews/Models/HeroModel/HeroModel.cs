@@ -26,7 +26,7 @@ namespace SuperHeroReviews.Models.HeroModel
         {
             ID = id;
             Name = name;
-            Universe = Universe;
+            Universe = universe;
         }
     }
     
