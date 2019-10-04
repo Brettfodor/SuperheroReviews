@@ -1,4 +1,4 @@
-﻿@model SuperHeroReviews.Models.HeroModel.HeroModel
+﻿@model IEnumerable<SuperHeroReviews.Models.HeroModel.HeroModel>
 @{
     Layout = null;
 }
@@ -11,6 +11,12 @@
     <title>Heroes</title>
 </head>
 <body>
-    
+    <div>
+        @{ foreach (SuperHeroReviews.Models.HeroModel.HeroModel hero in Model)
+            {
+                <div>@hero.Name</div>
+                }
+            }
+    </div>
 </body>
 </html>
