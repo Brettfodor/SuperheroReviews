@@ -11,6 +11,6 @@ namespace SuperHeroReviews.Repository
     {
         IEnumerable<T> GetAll();
 
-        T GetById(int id);
+        T GetById(string name);
     }
 }
