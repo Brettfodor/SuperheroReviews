@@ -11,12 +11,13 @@
     <title>Heroes</title>
 </head>
 <body>
-    <div>
-        @{ foreach (SuperHeroReviews.Models.HeroModel.HeroModel hero in Model)
-            {
-                <div>@hero.Name</div>
-                }
-            }
-    </div>
+    <h1>Hero List</h1>
+    @foreach (var hero in Model)
+    {
+        <p><a href="/Hero/Details/@hero.ID">Title: <span>@hero.Name</span></a></p>
+        <p>Universe: <span>@hero.Universe</span></p>
+        <hr />
+    }
+    
 </body>
 </html>
