@@ -8,6 +8,8 @@ namespace SuperHeroReviews.Tests
 {
     public class HomeControllerTests
     {
+
+
         [Fact]
         public void Index_Returns_ViewResult()
         {
