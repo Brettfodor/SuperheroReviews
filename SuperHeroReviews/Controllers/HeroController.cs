@@ -14,6 +14,10 @@ namespace SuperHeroReviews.Controllers
     {
 
         IRepository<HeroModel> heroRepo;
+        public HeroController(IRepository<HeroModel> heroRepo)
+        {
+            this.heroRepo = heroRepo;
+        }
 
         public ViewResult HeroIndex()
         {
@@ -24,10 +28,6 @@ namespace SuperHeroReviews.Controllers
             return View(model);
         }
 
-        public HeroController(IRepository<HeroModel> heroRepo)
-        {
-            this.heroRepo = heroRepo;
-        }
 
         public ViewResult Details(int id)
         {

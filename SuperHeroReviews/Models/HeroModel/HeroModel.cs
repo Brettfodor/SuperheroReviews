@@ -15,6 +15,7 @@ namespace SuperHeroReviews.Models.HeroModel
         public string Review { get; set; }
         public string Content { get; set; }
         public string Universe { get; set; }
+        
 
 
         public HeroModel()
@@ -22,11 +23,13 @@ namespace SuperHeroReviews.Models.HeroModel
 
         }
 
-        public HeroModel(int id, string name, string universe)
+        public HeroModel(int id, string name, string review, string universe, string content)
         {
             ID = id;
             Name = name;
             Universe = universe;
+            Content = content;
+            Review = review;
            
         }
     }
