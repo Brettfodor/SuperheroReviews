@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SuperHeroReviews.Models.HeroModel.HeroModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Heroes</title>
+</head>
+<body>
+    <h1>Hero List</h1>
+    <a href="/Home/Index">Return Home</a>
+    @foreach (var hero in Model)
+    {
+        <p><a href="/Hero/Details/@hero.ID">Hero: <span>@hero.Name</span></a></p>
+        <p>Universe: <span>@hero.Universe</span></p>
+        <hr />
+    }
+    
+</body>
+</html>
