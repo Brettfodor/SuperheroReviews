@@ -1,0 +1,21 @@
+﻿@model SuperHeroReviews.Models.HeroModel.HeroModel
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Heroes</title>
+</head>
+<body>
+    <h1>Hero Details</h1>
+    <p>Title: <span>@Model.Name</span></p>
+    <p>Universe: <span>@Model.Universe</span></p>
+    <hr />
+    <a href="/Hero/HeroIndex">Return to Hero List</a>
+
+</body>
+</html>
