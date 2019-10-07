@@ -20,15 +20,15 @@ namespace SuperHeroReviews.Tests
             Assert.IsType<ViewResult>(result);
         }
 
-        [Fact]
-        public void Hero_Returns_ViewResult()
-        {
-            var controller = new HeroController();
+        //[Fact]
+        //public void Hero_Returns_ViewResult()
+        //{
+        //    var controller = new HeroController();
 
-            var result = controller.HeroIndex();
+        //    var result = controller.HeroIndex();
 
-            Assert.IsType<ViewResult>(result);
-        }
+        //    Assert.IsType<ViewResult>(result);
+        //}
 
        
     }
