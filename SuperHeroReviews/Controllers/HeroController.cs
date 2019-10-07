@@ -19,7 +19,6 @@ namespace SuperHeroReviews.Controllers
             this.heroRepo = heroRepo;
         }
 
-
         public ViewResult HeroIndex()
         {
             //HeroRepository heroRepo = new HeroRepository();
