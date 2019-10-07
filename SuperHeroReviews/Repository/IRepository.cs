@@ -12,5 +12,8 @@ namespace SuperHeroReviews.Repository
         IEnumerable<T> GetAll();
 
         T GetById(int id);
+
+        
     }
+    
 }
