@@ -23,13 +23,14 @@ namespace SuperHeroReviews.Models.HeroModel
 
         }
 
-        public HeroModel(int id, string name, string review, string universe, string content)
+        public HeroModel(int id, string name, string review, string universe, string content, string image)
         {
             ID = id;
             Name = name;
             Universe = universe;
             Content = content;
             Review = review;
+            Image = image;
            
         }
     }
