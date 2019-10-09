@@ -23,7 +23,7 @@ namespace SuperHeroReviews
         {
             services.AddMvc();
 
-            services.AddScoped<IRepository<HeroModel>, HeroRepository>();
+            //services.AddScoped<IRepository<HeroModel>, HeroRepository>();
             
 
         }
