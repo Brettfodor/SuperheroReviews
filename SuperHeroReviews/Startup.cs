@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SuperHeroReviews.Models.HeroModel;
 using SuperHeroReviews.Repository;
 using SuperHeroReviews.Controllers;
+using SuperHeroReviews.Data; 
 
 namespace SuperHeroReviews
 {
@@ -23,8 +24,8 @@ namespace SuperHeroReviews
         {
             services.AddMvc();
 
-            //services.AddScoped<IRepository<HeroModel>, HeroRepository>();
-            
+            services.AddScoped<IRepository<HeroModel>, HeroRepository>();
+
 
         }
 
