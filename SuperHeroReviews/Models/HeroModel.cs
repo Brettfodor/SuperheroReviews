@@ -34,10 +34,4 @@ namespace SuperHeroReviews.Models.HeroModel
            
         }
     }
-    
-
-    
-
-   
-
 }
