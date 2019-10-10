@@ -335,6 +335,11 @@ namespace SuperHeroReviews.Data
                 {
                     ID = 21,
                     Review = "This character is awesome."
+                },
+                new ReviewModel()
+                {
+                    ID = 22,
+                    Review = "This character is unique and powerful"
                 }
                );
 
