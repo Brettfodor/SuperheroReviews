@@ -1,4 +1,28 @@
 ﻿html {
     font-size: 1rem;
-    margin-top: 1em;
+    margin-top: 3em;
 }
+body {
+    background: radial-gradient(ellipse at top, #51a2df, transparent), radial-gradient(ellipse at bottom, #ff6a00, transparent);
+}
+
+#detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    border: 3em;
+}
+
+    #detail article {
+        background: #7634ca;
+        padding: 1em;
+        color: white;
+    }
+
+        #detail article img {
+            width: 100%;
+            border: 1px solid #333;
+            height: auto;
+        }
+
+   

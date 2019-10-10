@@ -13,13 +13,19 @@
     <title>Heroes</title>
 </head>
 <body>
-    <h1>Hero Details</h1>
-    <p>Title: <span>@Model.Name</span></p>
-    <img src="@Model.Image" />
-    <p>Universe: <span>@Model.Universe</span></p>
-    <p>Description: <span>@Model.Content</span></p>
-    <p>Review: <span>@Model.Review</span></p>
-    <hr />
+    <div id="detail">
+        <article>
+            <img src="@Model.Image" />
+        </article>
+        <article>
+            <h1>Hero Details</h1>
+            <p>Title: <span>@Model.Name</span></p>
+            <p>Universe: <span>@Model.Universe</span></p>
+            <p>Description: <span>@Model.Content</span></p>
+            <p>Review: <span>@Model.Review</span></p>
+            <hr />
+        </article>
+    </div>
     <a href="/Hero/HeroIndex">Return to Hero List</a>
 
     <nav>

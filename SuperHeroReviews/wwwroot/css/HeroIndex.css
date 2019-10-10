@@ -13,13 +13,16 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
+    grid-row-gap: 1em;
     border: 3em;
+   
 }
 
     #hero article {
         background: #0c1cb7;
         padding: 1em;
         color: #00ff21;
+        border-radius: 2em;
     }
 
         #hero article img {
