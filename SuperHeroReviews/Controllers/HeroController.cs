@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SuperHeroReviews.Models.HeroModel;
+using SuperHeroReviews.Models;
 using SuperHeroReviews.Repository;
 
 
@@ -13,8 +13,8 @@ namespace SuperHeroReviews.Controllers
     public class HeroController : Controller
     {
 
-        IRepository<HeroModel> heroRepo;
-        public HeroController(IRepository<HeroModel> heroRepo)
+        Repository<HeroModel> heroRepo;
+        public HeroController(Repository<HeroModel> heroRepo)
         {
             this.heroRepo = heroRepo;
         }
