@@ -17,10 +17,10 @@ namespace SuperHeroReviews.Models
 
         }
 
-        public UniverseModel(int id, string comicUniverse, string faction)
+        public UniverseModel(int id, string universe, string faction)
         {
             ID = id;
-            Universe = comicUniverse;
+            Universe = universe;
             Faction = faction;
 
         }

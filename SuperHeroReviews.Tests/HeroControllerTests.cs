@@ -12,7 +12,7 @@ namespace SuperHeroReviews.Tests
         HeroModel herotest;
         public HeroControllerTests()
         {
-            herotest = new HeroModel(21, "Hero Name", "review", "Universe", "Content", "Img");
+            herotest = new HeroModel(21, "Hero Name", "Content", "Img");
 
         }
             
@@ -36,22 +36,9 @@ namespace SuperHeroReviews.Tests
 
         }
 
-        [Fact]
-        public void CourseConstructor_Sets_Review()
-        {
-            var result = herotest.Review;
 
-            Assert.Equal("review", result);
-        }
 
-        [Fact]
-        public void CourseConstructor_Sets_Universe()
-        {
-            var result = herotest.Universe;
 
-            Assert.Equal("Universe", result);
-
-        }
 
         [Fact]
         public void CourseConstructor_Sets_Content()

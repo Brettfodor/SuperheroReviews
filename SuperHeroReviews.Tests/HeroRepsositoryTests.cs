@@ -1,10 +1,11 @@
-﻿using SuperHeroReviews.Models.HeroModel;
+﻿using SuperHeroReviews.Models;
 using SuperHeroReviews.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xunit;
+using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Tests
 {
