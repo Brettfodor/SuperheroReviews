@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Migrations
 {
     [DbContext(typeof(SuperContext))]
-    partial class SuperContextModelSnapshot : ModelSnapshot
+    [Migration("20191010183156_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,8 +71,6 @@ namespace SuperHeroReviews.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("HeroModelID");
-
                     b.Property<int>("Rating");
 
                     b.Property<string>("Review");
@@ -81,33 +81,30 @@ namespace SuperHeroReviews.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("HeroModelID");
-
                     b.ToTable("Review");
 
                     b.HasData(
-                        new { ID = 1, HeroModelID = 1, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 2, HeroModelID = 2, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 3, HeroModelID = 3, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 22, HeroModelID = 4, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 4, HeroModelID = 4, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 5, HeroModelID = 5, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 6, HeroModelID = 6, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 7, HeroModelID = 7, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 8, HeroModelID = 8, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 9, HeroModelID = 9, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 10, HeroModelID = 10, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 11, HeroModelID = 11, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 12, HeroModelID = 12, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 13, HeroModelID = 13, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 14, HeroModelID = 14, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 15, HeroModelID = 15, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 16, HeroModelID = 16, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 17, HeroModelID = 17, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 18, HeroModelID = 18, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 19, HeroModelID = 19, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 20, HeroModelID = 20, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 21, HeroModelID = 21, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" }
+                        new { ID = 1, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 2, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 3, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 4, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 5, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 6, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 7, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 8, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 9, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 10, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 11, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 12, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 13, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 14, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 15, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 16, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 17, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 18, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 19, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 20, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 21, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" }
                     );
                 });
 
@@ -136,14 +133,6 @@ namespace SuperHeroReviews.Migrations
                     b.HasOne("SuperHeroReviews.Models.UniverseModel", "Universe")
                         .WithMany()
                         .HasForeignKey("UniverseID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("SuperHeroReviews.Models.ReviewModel", b =>
-                {
-                    b.HasOne("SuperHeroReviews.Models.HeroModel", "HeroModel")
-                        .WithMany("Reviews")
-                        .HasForeignKey("HeroModelID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

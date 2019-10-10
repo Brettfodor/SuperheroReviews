@@ -14,9 +14,14 @@
     <h1>Hero Details</h1>
     <p>Title: <span>@Model.Name</span></p>
     <img src="@Model.Image" />
-    <p>Universe: <span>@Model.Universe</span></p>
+    <p>Universe: <span>@Model.UniverseID</span></p>
     <p>Description: <span>@Model.Content</span></p>
-    <p>Review: <span>@Model.Review</span></p>
+
+    @foreach (var review in Model.Reviews)
+    {
+        <p>Review: <span> @review.Review</span></p>
+        <hr />
+    }
     <hr />
     <a href="/Hero/HeroIndex">Return to Hero List</a>
 

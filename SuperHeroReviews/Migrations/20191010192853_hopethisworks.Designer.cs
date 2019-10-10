@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Migrations
 {
     [DbContext(typeof(SuperContext))]
-    partial class SuperContextModelSnapshot : ModelSnapshot
+    [Migration("20191010192853_hopethisworks")]
+    partial class hopethisworks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,7 +91,6 @@ namespace SuperHeroReviews.Migrations
                         new { ID = 1, HeroModelID = 1, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 2, HeroModelID = 2, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 3, HeroModelID = 3, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 22, HeroModelID = 4, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 4, HeroModelID = 4, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 5, HeroModelID = 5, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 6, HeroModelID = 6, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },

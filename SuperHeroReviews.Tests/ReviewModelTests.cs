@@ -8,10 +8,11 @@ namespace SuperHeroReviews.Tests
 {
     public class ReviewModelTests
     {
+        
         ReviewModel herotest;
         public ReviewModelTests()
         {
-            herotest = new ReviewModel(21, "review");
+            herotest = new ReviewModel(21, "review", "name", 5, "10/10/2019",1);
 
         }
         [Fact]

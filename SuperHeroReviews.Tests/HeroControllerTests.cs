@@ -10,9 +10,10 @@ namespace SuperHeroReviews.Tests
     public class HeroControllerTests
     {
         HeroModel herotest;
+        ICollection<ReviewModel> reviews;
         public HeroControllerTests()
         {
-            herotest = new HeroModel(21, "Hero Name", "Content", "Img");
+            herotest = new HeroModel(21, "Hero Name", "Content", "Img", reviews); 
 
         }
             

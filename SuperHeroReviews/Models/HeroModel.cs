@@ -12,8 +12,8 @@ namespace SuperHeroReviews.Models
         public string Image { get; set; }
         public string Content { get; set; }
 
-        public virtual int ReviewID { get; set; }
-        public virtual ReviewModel Review { get; set; }
+        public virtual ICollection<ReviewModel> Reviews { get; set; }
+
 
         public virtual int UniverseID { get; set; }
         public virtual UniverseModel Universe { get; set; }
@@ -24,12 +24,13 @@ namespace SuperHeroReviews.Models
 
         }
 
-        public HeroModel(int id, string name, string content, string image)
+        public HeroModel(int id, string name, string content, string image, ICollection<ReviewModel> reviews) 
         {
             ID = id;
             Name = name;
             Content = content;
             Image = image;
+            Reviews = reviews;
 
         }
     }
