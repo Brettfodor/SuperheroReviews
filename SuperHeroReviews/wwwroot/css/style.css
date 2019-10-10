@@ -1,9 +1,14 @@
 ﻿
+* 
+{
+    font-family:'Comic Sans MS';
+}
+
 body {
-    background-image: url("../images/DCvsMarvel5.jpg"); 
+    background-image: url("../images/DCvsMarvel6.jpg"); 
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
 }
 
@@ -14,14 +19,16 @@ main {
     text-align: center;
 }
 
-.container
-{
+.container {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items:center;
     padding-top: 2rem;
-   background: #ff6a00;
-   margin: auto 45rem;   
+    margin: 5rem 10rem;
+    border-radius: 1rem;
+    opacity: .90;
+    color: #fff;
+    font-size: 2rem;
+    background: radial-gradient(#A23645,#462e74);
 }
 
 nav {
@@ -41,5 +48,18 @@ nav a{
     color: #fff;
 }
 nav a:hover{
-    background: #ff6a00;
+
+    background: #666;
 }
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    right: 40%;
+    left: 40%;
+}
+
