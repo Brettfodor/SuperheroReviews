@@ -15,6 +15,7 @@ namespace SuperHeroReviews.Models
         public virtual int ReviewID { get; set; }
         public virtual ReviewModel Review { get; set; }
 
+
         public virtual int UniverseID { get; set; }
         public virtual UniverseModel Universe { get; set; }
 
