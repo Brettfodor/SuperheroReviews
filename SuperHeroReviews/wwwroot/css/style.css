@@ -48,6 +48,7 @@ nav a{
     color: #fff;
 }
 nav a:hover{
+
     background: #666;
 }
 
@@ -61,3 +62,4 @@ footer {
     right: 40%;
     left: 40%;
 }
+
