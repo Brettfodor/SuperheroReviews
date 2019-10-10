@@ -3,6 +3,10 @@
 {
     font-family:'Comic Sans MS';
 }
+html {
+    font-size: 1rem;
+    margin-top: 1em;
+}
 
 body {
     background-image: url("../images/DCvsMarvel6.jpg"); 
@@ -31,7 +35,7 @@ main {
     background: radial-gradient(#A23645,#462e74);
 }
 
-nav {
+/*nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,7 +54,7 @@ nav a{
 nav a:hover{
 
     background: #666;
-}
+}*/
 
 footer {
     margin-top: 2em;
