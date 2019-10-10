@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
-
-namespace SuperHeroReviews.Models.HeroModel
+namespace SuperHeroReviews.Models
 {
-    public class HeroModel 
+    public class HeroModel
     {
-        public int ID { get;  set;  }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
@@ -32,7 +30,7 @@ namespace SuperHeroReviews.Models.HeroModel
             Name = name;
             Content = content;
             Image = image;
-           
+
         }
     }
 }

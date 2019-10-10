@@ -1,12 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SuperHeroReviews.Models;
-using SuperHeroReviews.Models.HeroModel;
+using Microsoft.EntityFrameworkCore;
 
-namespace SuperHeroReviews
+namespace SuperHeroReviews.Data
 {
     public class SuperContext : DbContext
     {
@@ -34,7 +33,7 @@ namespace SuperHeroReviews
                     Content = "Iron Man is an awesome Hero whose strength is derived from the powers of technology.  Using his enhanced iron suit, he is able to muster super strength, the ability to fly, laser cannons, rockets, and communications with his supercomputer Jarvis",
                     ReviewID = 1,
                     UniverseID = 1
-                    
+
                 },
 
                 new HeroModel()

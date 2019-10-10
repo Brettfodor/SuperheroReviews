@@ -9,10 +9,11 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SuperHeroReviews.Models.HeroModel;
+using SuperHeroReviews.Models;
 using SuperHeroReviews.Repository;
 using SuperHeroReviews.Controllers;
-using SuperHeroReviews.Data; 
+using SuperHeroReviews.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace SuperHeroReviews
 {
@@ -23,8 +24,10 @@ namespace SuperHeroReviews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
-            services.AddScoped<IRepository<HeroModel>, HeroRepository>();
+            services.AddDbContext<SuperContext>();
+            services.AddScoped<Repository<HeroModel>, HeroRepository>();
+            services.AddScoped<Repository<ReviewModel>, ReviewRepository>();
+            services.AddScoped<Repository<UniverseModel>, UniverseRepository>();
 
 
         }
