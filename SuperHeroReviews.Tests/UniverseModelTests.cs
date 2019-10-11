@@ -9,9 +9,10 @@ namespace SuperHeroReviews.Tests
     public class UniverseModelTests
     {
         UniverseModel herotest;
+        ICollection<HeroModel> heroes;
         public UniverseModelTests()
         {
-            herotest = new UniverseModel(21, "Universe", "Faction");
+            herotest = new UniverseModel(21, "Universe", heroes );
 
         }
         [Fact]
