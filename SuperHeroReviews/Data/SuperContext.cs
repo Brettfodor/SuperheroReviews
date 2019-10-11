@@ -232,15 +232,7 @@ namespace SuperHeroReviews.Data
                     HeroModelID = 3
                 },
 
-                new ReviewModel()
-                {
-                    ID = 22,
-                    Review = "This character is awesome as heck.",
-                    ReviewerName = "Steve",
-                    Rating = 5,
-                    ReviewDate = "10/10/2019",
-                    HeroModelID = 4
-                },
+                
                new ReviewModel()
                {
                    ID = 4,
@@ -406,6 +398,196 @@ namespace SuperHeroReviews.Data
                 {
                     ID = 21,
                     Review = "This character is awesome.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 21
+                },
+                new ReviewModel()
+                {
+                    ID = 22,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 1
+                },
+                new ReviewModel()
+                {
+                    ID = 23,
+                    Review = "This character is awesome for real.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 2
+                },
+                new ReviewModel()
+                {
+                    ID = 24,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 3
+                },
+                new ReviewModel()
+                {
+                    ID = 25,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 4
+                },
+                new ReviewModel()
+                {
+                    ID = 26,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 5
+                },
+                new ReviewModel()
+                {
+                    ID = 27,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 6
+                },
+                new ReviewModel()
+                {
+                    ID = 28,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 7
+                },
+                new ReviewModel()
+                {
+                    ID = 29,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 8
+                },
+                new ReviewModel()
+                {
+                    ID = 30,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 9
+                },
+                new ReviewModel()
+                {
+                    ID = 31,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 10
+                },
+                new ReviewModel()
+                {
+                    ID = 32,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 11
+                },
+                new ReviewModel()
+                {
+                    ID = 33,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 12
+                },
+                new ReviewModel()
+                {
+                    ID = 34,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 13
+                },
+                new ReviewModel()
+                {
+                    ID = 35,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 14
+                },
+                new ReviewModel()
+                {
+                    ID = 36,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 15
+                },
+                new ReviewModel()
+                {
+                    ID = 37,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 16
+                },
+                new ReviewModel()
+                {
+                    ID = 38,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 17
+                },
+                new ReviewModel()
+                {
+                    ID = 39,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 18
+                },
+
+                new ReviewModel()
+                {
+                    ID = 40,
+                    Review = "This character is awesome.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 19
+                },
+                new ReviewModel()
+                {
+                    ID = 41,
+                    Review = "This character is awesome as heck.",
+                    ReviewerName = "Steve",
+                    Rating = 5,
+                    ReviewDate = "10/10/2019",
+                    HeroModelID = 20
+                },
+                new ReviewModel()
+                {
+                    ID = 42,
+                    Review = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
