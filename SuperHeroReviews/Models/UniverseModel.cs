@@ -12,17 +12,18 @@ namespace SuperHeroReviews.Models
         public string Universe { get; set; }
         public string Faction { get; set; }
 
+        public virtual ICollection<HeroModel> Heroes { get; set; }
+
         public UniverseModel()
         {
 
         }
 
-        public UniverseModel(int id, string universe, string faction)
+        public UniverseModel(int id, string universe, ICollection<HeroModel> heroes)
         {
             ID = id;
             Universe = universe;
-            Faction = faction;
-
+            Heroes = heroes;
         }
     }
 }

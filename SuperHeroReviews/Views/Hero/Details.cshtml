@@ -14,7 +14,10 @@
     <h1>Hero Details</h1>
     <p>Title: <span>@Model.Name</span></p>
     <img src="@Model.Image" />
-    <p>Universe: <span>@Model.UniverseID</span></p>
+
+    <p>Universe: <span>@Model.Universe.Universe</span></p>
+    
+
     <p>Description: <span>@Model.Content</span></p>
 
     @foreach (var review in Model.Reviews)

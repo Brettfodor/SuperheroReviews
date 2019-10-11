@@ -13,7 +13,7 @@ namespace SuperHeroReviews.Tests
         ICollection<ReviewModel> reviews;
         public HeroControllerTests()
         {
-            herotest = new HeroModel(21, "Hero Name", "Content", "Img", reviews); 
+            herotest = new HeroModel(21, "Hero Name", "Content", "Img", reviews, 6); 
 
         }
             

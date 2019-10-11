@@ -3,26 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SuperHeroReviews.Migrations
 {
-    public partial class Initial : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Review",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Review = table.Column<string>(nullable: true),
-                    ReviewerName = table.Column<string>(nullable: true),
-                    Rating = table.Column<int>(nullable: false),
-                    ReviewDate = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Review", x => x.ID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Universe",
                 columns: table => new
@@ -46,59 +30,55 @@ namespace SuperHeroReviews.Migrations
                     Name = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true),
-                    UniverseID = table.Column<int>(nullable: false)
+                    UniverseModelID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Heroes", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Heroes_Universe_UniverseID",
-                        column: x => x.UniverseID,
+                        name: "FK_Heroes_Universe_UniverseModelID",
+                        column: x => x.UniverseModelID,
                         principalTable: "Universe",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Review",
-                columns: new[] { "ID", "Rating", "Review", "ReviewDate", "ReviewerName" },
-                values: new object[,]
+            migrationBuilder.CreateTable(
+                name: "Review",
+                columns: table => new
                 {
-                    { 1, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 21, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 20, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 19, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 18, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 17, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 16, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 15, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 14, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 13, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 12, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 10, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 9, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 8, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 7, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 6, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 5, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 4, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 3, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 2, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 11, 5, "This character is awesome.", "10/10/2019", "Steve" }
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Review = table.Column<string>(nullable: true),
+                    ReviewerName = table.Column<string>(nullable: true),
+                    Rating = table.Column<int>(nullable: false),
+                    ReviewDate = table.Column<string>(nullable: true),
+                    HeroModelID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Review", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Review_Heroes_HeroModelID",
+                        column: x => x.HeroModelID,
+                        principalTable: "Heroes",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Universe",
                 columns: new[] { "ID", "Faction", "Universe" },
-                values: new object[,]
-                {
-                    { 1, null, "Marvel" },
-                    { 2, null, "DC" }
-                });
+                values: new object[] { 1, null, "Marvel" });
+
+            migrationBuilder.InsertData(
+                table: "Universe",
+                columns: new[] { "ID", "Faction", "Universe" },
+                values: new object[] { 2, null, "DC" });
 
             migrationBuilder.InsertData(
                 table: "Heroes",
-                columns: new[] { "ID", "Content", "Image", "Name", "UniverseID" },
+                columns: new[] { "ID", "Content", "Image", "Name", "UniverseModelID" },
                 values: new object[,]
                 {
                     { 1, "Iron Man is an awesome Hero whose strength is derived from the powers of technology.  Using his enhanced iron suit, he is able to muster super strength, the ability to fly, laser cannons, rockets, and communications with his supercomputer Jarvis", "/images/IronMan.jpg", "IronMan", 1 },
@@ -124,19 +104,73 @@ namespace SuperHeroReviews.Migrations
                     { 21, "Whether by way of award-winning films like ‘The Dark Knight,’ Emmy-winning animated programs like ‘Batman: The Animated Series,' video game appearances such as the record - breaking ‘Batman: Arkham Asylum,’ or the countless comics stacking comic book shelves and digital libraries, the Joker stands unquestionably as the most recognizable and popular comic book villain in pop culture history.Unpredictable, violent and incredibly dangerous, he is chaos personified and has taken on everyone from his archenemy Batman to even the Man of Steel.But Gotham remains his primary home and Batman his biggest adversary, and no hero is perhaps better suited as in many ways, the Joker is the polar opposite of the Dark Knight.Both were created by a great tragedy, but Batman has since vowed to do whatever it takes to prevent similar incidents, the Joker revels in creating chaos and destroying lives, believing that life’s a big joke and psychotically demonstrating that in a moment, it can all change.Not much is known about his past, but his acts during the present are what define the Joker as one of the greatest threats to our heroes and the people they've sworn to protect. He's killed a Robin, crippled Batgirl, and tortured and murdered countless people throughout the DC Universe—all just for a laugh.", "/images/joker.jpg", "Joker", 2 }
                 });
 
+            migrationBuilder.InsertData(
+                table: "Review",
+                columns: new[] { "ID", "HeroModelID", "Rating", "Review", "ReviewDate", "ReviewerName" },
+                values: new object[,]
+                {
+                    { 1, 1, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 33, 12, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 13, 13, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 34, 13, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 14, 14, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 35, 14, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 15, 15, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 36, 15, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 16, 16, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 37, 16, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 17, 17, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 38, 17, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 18, 18, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 39, 18, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 19, 19, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 40, 19, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 20, 20, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 41, 20, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 12, 12, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 32, 11, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 11, 11, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 31, 10, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 22, 1, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 2, 2, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 23, 2, 5, "This character is awesome for real.", "10/10/2019", "Steve" },
+                    { 3, 3, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 24, 3, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 4, 4, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 25, 4, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 5, 5, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 21, 21, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 26, 5, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 27, 6, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 7, 7, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 28, 7, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 8, 8, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 29, 8, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 9, 9, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 30, 9, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 10, 10, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 6, 6, 5, "This character is awesome.", "10/10/2019", "Steve" },
+                    { 42, 21, 5, "This character is awesome as heck.", "10/10/2019", "Steve" }
+                });
+
             migrationBuilder.CreateIndex(
-                name: "IX_Heroes_UniverseID",
+                name: "IX_Heroes_UniverseModelID",
                 table: "Heroes",
-                column: "UniverseID");
+                column: "UniverseModelID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Review_HeroModelID",
+                table: "Review",
+                column: "HeroModelID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Heroes");
+                name: "Review");
 
             migrationBuilder.DropTable(
-                name: "Review");
+                name: "Heroes");
 
             migrationBuilder.DropTable(
                 name: "Universe");
