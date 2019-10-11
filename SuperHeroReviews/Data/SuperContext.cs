@@ -397,15 +397,16 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 21,
+
                     Review = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
                     HeroModelID = 21
-                },
-                new ReviewModel()
-                {
-                    ID = 22,
+
+                    Review = "This character is awesome."
+
+
                     Review = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
@@ -592,6 +593,8 @@ namespace SuperHeroReviews.Data
                     Rating = 5,
                     ReviewDate = "10/10/2019",
                     HeroModelID = 21
+
+
                 }
                );
 

@@ -29,11 +29,11 @@ namespace SuperHeroReviews.Tests
         }
 
         [Fact]
-        public void Count_Starts_At_Zero()
+        public void Count_Starts_At_TwentyOne()
         {
             var count = underTest.Count();
 
-            Assert.Equal(0, count);
+            Assert.Equal(21, count);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace SuperHeroReviews.Tests
             underTest.Create(new HeroModel() { Name = "BatMan" });
 
             var count = underTest.Count();
-            Assert.Equal(1, count);
+            Assert.Equal(22, count);
         }
 
         [Fact]

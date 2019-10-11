@@ -8,17 +8,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/HeroIndex.css" />
+    <link rel="stylesheet" href="~/css/NavBar.css" />
     <title>Heroes</title>
 </head>
 <body>
     <h1>Hero List</h1>
     <a href="/Home/Index">Return Home</a>
-    @foreach (var hero in Model)
-    {
-        <p><a href="/Hero/Details/@hero.ID">Hero: <span>@hero.Name</span></a></p>
-        
-        <hr />
-    }
-    
+
+    <div id="hero">
+        @foreach (var hero in Model)
+        {
+
+            <article>
+                <p><a href="/Hero/Details/@hero.ID"><img src="@hero.Image"></a></p>
+                <p>Hero: @hero.Name </p>
+                <hr />
+            </article>
+
+        }
+    </div>
+    <nav>
+        <a href="/Home/MCU">MCU</a>
+        <a href="DCU.cshtml">DCU</a>
+        <a href="about.cshtml">About</a>
+        <a href="index.cshtml">Home</a>
+        <a href="/Hero/HeroIndex">All Heroes</a>
+    </nav>
 </body>
 </html>

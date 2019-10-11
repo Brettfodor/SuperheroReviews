@@ -1,0 +1,36 @@
+﻿*{
+    padding: 0;
+}
+html {
+    font-size: 1rem;
+    margin-top: 1em;
+}
+body {
+    background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}
+#hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    border: 3em;
+   
+}
+
+    #hero article {
+        background: #0c1cb7;
+        padding: 1em;
+        color: #00ff21;
+        border-radius: 2em;
+    }
+
+        #hero article img {
+            width: 100%;
+            border: 1px solid #333;
+            height: 15em;
+        }
+
+    #hero img:hover {
+        transform: scale(1.6);
+    }

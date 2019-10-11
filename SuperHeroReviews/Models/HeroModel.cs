@@ -15,6 +15,7 @@ namespace SuperHeroReviews.Models
         public virtual ICollection<ReviewModel> Reviews { get; set; }
 
 
+
         public virtual int UniverseModelID { get; set; }
         public virtual UniverseModel Universe { get; set; }
 
