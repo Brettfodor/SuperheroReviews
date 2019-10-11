@@ -131,7 +131,7 @@ namespace SuperHeroReviews.Migrations
                     { 32, 11, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
                     { 11, 11, 5, "This character is awesome.", "10/10/2019", "Steve" },
                     { 31, 10, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 22, 1, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
+                    { 22, 1, 5, "This character is awesome for real.", "10/10/2019", "Steve" },
                     { 2, 2, 5, "This character is awesome.", "10/10/2019", "Steve" },
                     { 23, 2, 5, "This character is awesome for real.", "10/10/2019", "Steve" },
                     { 3, 3, 5, "This character is awesome.", "10/10/2019", "Steve" },

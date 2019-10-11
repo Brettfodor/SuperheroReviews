@@ -14,7 +14,7 @@ namespace SuperHeroReviews.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
+                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -107,7 +107,7 @@ namespace SuperHeroReviews.Migrations
                         new { ID = 19, HeroModelID = 19, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 20, HeroModelID = 20, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 21, HeroModelID = 21, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 22, HeroModelID = 1, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 22, HeroModelID = 1, Rating = 5, Review = "This character is awesome for real.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 23, HeroModelID = 2, Rating = 5, Review = "This character is awesome for real.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 24, HeroModelID = 3, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
                         new { ID = 25, HeroModelID = 4, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },

@@ -403,11 +403,11 @@ namespace SuperHeroReviews.Data
                     Rating = 5,
                     ReviewDate = "10/10/2019",
                     HeroModelID = 21
-
-                    Review = "This character is awesome."
-
-
-                    Review = "This character is awesome as heck.",
+                },
+                new ReviewModel()
+                {
+                    ID = 22,
+                    Review = "This character is awesome for real.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
