@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SuperHeroReviews.Models;
+using SuperHeroReviews.Repository;
 
 namespace SuperHeroReviews.Controllers
 {
