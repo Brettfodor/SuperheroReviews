@@ -9,6 +9,7 @@ namespace SuperHeroReviews.Repository
 {
     public class ReviewRepository : Repository<ReviewModel>
     {
+        private SuperContext db;
         public ReviewRepository(SuperContext context) : base(context)
         {
         }

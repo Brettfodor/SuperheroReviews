@@ -12,6 +12,12 @@ namespace SuperHeroReviews.Controllers
     public class ReviewController : Controller
     {
 
+        public ViewResult CreateReviews()
+
+        {
+            return View();
+        }
+
         public ViewResult AllReviews()
         {
             return View();
@@ -49,7 +55,7 @@ namespace SuperHeroReviews.Controllers
         public ActionResult Create(ReviewModel review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("ReviewIndex");
         }
 
         [HttpGet]
@@ -70,7 +76,7 @@ namespace SuperHeroReviews.Controllers
         public ActionResult Delete(ReviewModel review)
         {
             reviewRepo.Delete(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("ReviewIndex");
         }
     }
 }

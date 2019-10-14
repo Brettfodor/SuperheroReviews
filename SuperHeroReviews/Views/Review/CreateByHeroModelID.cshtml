@@ -1,0 +1,59 @@
+﻿@model SuperHeroReviews.Models.ReviewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateReviews</title>
+</head>
+<body>
+
+    <h4>ReviewModel</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Review" class="control-label"></label>
+                    <input asp-for="Review" value="test" class="form-control" />
+                    <span asp-validation-for="Review" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReviewerName" class="control-label"></label>
+                    <input asp-for="ReviewerName" class="form-control" />
+                    <span asp-validation-for="ReviewerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rating" class="control-label"></label>
+                    <input asp-for="Rating" class="form-control" />
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReviewDate" class="control-label"></label>
+                    <input asp-for="ReviewDate" class="form-control" />
+                    <span asp-validation-for="ReviewDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="HeroModelID" type="hidden" class="form-control" value="@ViewBag.HeroModelID" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a href="/Hero/Details">Back to Hero</a>
+    </div>
+
+
+</body>
+</html>
