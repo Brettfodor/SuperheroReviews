@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperHeroReviews.Repository
 {
-    public class Repository<T>
+    public class Repository<T> : IRepository<T>
         where T : class
     {
         private DbContext db;

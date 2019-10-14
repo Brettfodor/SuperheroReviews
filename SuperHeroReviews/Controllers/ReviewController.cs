@@ -11,6 +11,7 @@ namespace SuperHeroReviews.Controllers
 {
     public class ReviewController : Controller
     {
+
         public ViewResult AllReviews()
         {
             return View();
@@ -37,5 +38,40 @@ namespace SuperHeroReviews.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(ReviewModel review)
+        {
+            reviewRepo.Create(review);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ViewResult CreateByHeroModelID(int id)
+        {
+            ViewBag.HeroModelID = id;
+            return View();
+        }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = reviewRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(ReviewModel review)
+        {
+            reviewRepo.Delete(review);
+            return RedirectToAction("Index");
+        }
     }
 }
+
