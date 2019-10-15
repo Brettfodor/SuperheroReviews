@@ -29,11 +29,19 @@
     <h2>Reviews</h2>
     @foreach (var review in Model.Reviews)
     {
-        <p>Review: <span> @review.Review</span></p>
+        <p>Review: <span> @review.Review</span><a href="/Review/Delete/@review.ID">Delete</a></p>
         <hr />
     }
-   
+
     <a href="/Hero/HeroIndex">Return to Hero List</a>
+    @*<a href="/Review/Create/@Model.ID">Create Hero Review</a>*@
+    <div>
+        <section id="Forms">
+            <form action="/Review/Create/@Model.ID" method="get">
+                <input type="submit" value="Add Review" /><br>
+            </form>
+        </section>
+    </div>
 
 
     <nav>

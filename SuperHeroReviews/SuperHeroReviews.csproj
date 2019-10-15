@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Review\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

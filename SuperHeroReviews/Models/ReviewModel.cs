@@ -14,7 +14,7 @@ namespace SuperHeroReviews.Models
         public int Rating { get; set; }
         public string ReviewDate { get; set; }
 
-        public virtual int HeroModelID { get; set; }
+        public int HeroModelID { get; set; }
         public virtual HeroModel HeroModel { get; set; }
         
         public ReviewModel()

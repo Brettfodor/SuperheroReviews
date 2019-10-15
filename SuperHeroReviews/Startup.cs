@@ -15,6 +15,7 @@ using SuperHeroReviews.Controllers;
 using SuperHeroReviews.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace SuperHeroReviews
 {
     public class Startup
@@ -25,9 +26,9 @@ namespace SuperHeroReviews
         {
             services.AddMvc();
             services.AddDbContext<SuperContext>();
-            services.AddScoped<Repository<HeroModel>, HeroRepository>();
-            services.AddScoped<Repository<ReviewModel>, ReviewRepository>();
-            services.AddScoped<Repository<UniverseModel>, UniverseRepository>();
+            services.AddScoped<IRepository<HeroModel>, HeroRepository>();
+            services.AddScoped<IRepository<ReviewModel>, ReviewRepository>();
+            services.AddScoped<IRepository<UniverseModel>, UniverseRepository>();
 
 
         }

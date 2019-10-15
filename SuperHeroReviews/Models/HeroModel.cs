@@ -7,7 +7,7 @@ namespace SuperHeroReviews.Models
 {
     public class HeroModel
     {
-        public int ID { get; set; }
+        public int HeroModelID { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
@@ -27,7 +27,7 @@ namespace SuperHeroReviews.Models
 
         public HeroModel(int id, string name, string content, string image, ICollection<ReviewModel> reviews, int universeModelID) 
         {
-            ID = id;
+            HeroModelID = id;
             Name = name;
             Content = content;
             Image = image;
