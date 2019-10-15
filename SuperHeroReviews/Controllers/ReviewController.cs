@@ -71,6 +71,19 @@ namespace SuperHeroReviews.Controllers
             reviewRepo.Delete(review);
             return RedirectToAction("Details", "Hero", new { id = review.HeroModelID });
         }
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            var model = reviewRepo.GetByID(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ReviewModel review)
+        {
+            reviewRepo.Edit(review);
+            return RedirectToAction("Details", "Hero", new { id = review.HeroModelID });
+        }
     }
 }
 
