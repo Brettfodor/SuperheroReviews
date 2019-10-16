@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SuperHeroReviews.Migrations
 {
-    public partial class thng : Migration
+    public partial class firstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Universe",
+                name: "Universes",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -18,7 +18,7 @@ namespace SuperHeroReviews.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Universe", x => x.ID);
+                    table.PrimaryKey("PK_Universes", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,20 +36,20 @@ namespace SuperHeroReviews.Migrations
                 {
                     table.PrimaryKey("PK_Heroes", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Heroes_Universe_UniverseModelID",
+                        name: "FK_Heroes_Universes_UniverseModelID",
                         column: x => x.UniverseModelID,
-                        principalTable: "Universe",
+                        principalTable: "Universes",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Review",
+                name: "Reviews",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Review = table.Column<string>(nullable: true),
+                    Content = table.Column<string>(nullable: true),
                     ReviewerName = table.Column<string>(nullable: true),
                     Rating = table.Column<int>(nullable: false),
                     ReviewDate = table.Column<string>(nullable: true),
@@ -57,9 +57,9 @@ namespace SuperHeroReviews.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Review", x => x.ID);
+                    table.PrimaryKey("PK_Reviews", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Review_Heroes_HeroModelID",
+                        name: "FK_Reviews_Heroes_HeroModelID",
                         column: x => x.HeroModelID,
                         principalTable: "Heroes",
                         principalColumn: "ID",
@@ -67,12 +67,12 @@ namespace SuperHeroReviews.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Universe",
+                table: "Universes",
                 columns: new[] { "ID", "Faction", "Universe" },
                 values: new object[] { 1, null, "Marvel" });
 
             migrationBuilder.InsertData(
-                table: "Universe",
+                table: "Universes",
                 columns: new[] { "ID", "Faction", "Universe" },
                 values: new object[] { 2, null, "DC" });
 
@@ -105,52 +105,52 @@ namespace SuperHeroReviews.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Review",
-                columns: new[] { "ID", "HeroModelID", "Rating", "Review", "ReviewDate", "ReviewerName" },
+                table: "Reviews",
+                columns: new[] { "ID", "Content", "HeroModelID", "Rating", "ReviewDate", "ReviewerName" },
                 values: new object[,]
                 {
-                    { 1, 1, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 33, 12, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 13, 13, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 34, 13, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 14, 14, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 35, 14, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 15, 15, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 36, 15, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 16, 16, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 37, 16, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 17, 17, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 38, 17, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 18, 18, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 39, 18, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 19, 19, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 40, 19, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 20, 20, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 41, 20, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 12, 12, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 32, 11, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 11, 11, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 31, 10, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 22, 1, 5, "This character is awesome for real.", "10/10/2019", "Steve" },
-                    { 2, 2, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 23, 2, 5, "This character is awesome for real.", "10/10/2019", "Steve" },
-                    { 3, 3, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 24, 3, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 4, 4, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 25, 4, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 5, 5, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 21, 21, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 26, 5, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 27, 6, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 7, 7, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 28, 7, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 8, 8, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 29, 8, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 9, 9, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 30, 9, 5, "This character is awesome as heck.", "10/10/2019", "Steve" },
-                    { 10, 10, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 6, 6, 5, "This character is awesome.", "10/10/2019", "Steve" },
-                    { 42, 21, 5, "This character is awesome as heck.", "10/10/2019", "Steve" }
+                    { 1, "This character is awesome.", 1, 5, "10/10/2019", "Steve" },
+                    { 33, "This character is awesome as heck.", 12, 5, "10/10/2019", "Steve" },
+                    { 13, "This character is awesome.", 13, 5, "10/10/2019", "Steve" },
+                    { 34, "This character is awesome as heck.", 13, 5, "10/10/2019", "Steve" },
+                    { 14, "This character is awesome.", 14, 5, "10/10/2019", "Steve" },
+                    { 35, "This character is awesome as heck.", 14, 5, "10/10/2019", "Steve" },
+                    { 15, "This character is awesome.", 15, 5, "10/10/2019", "Steve" },
+                    { 36, "This character is awesome as heck.", 15, 5, "10/10/2019", "Steve" },
+                    { 16, "This character is awesome.", 16, 5, "10/10/2019", "Steve" },
+                    { 37, "This character is awesome as heck.", 16, 5, "10/10/2019", "Steve" },
+                    { 17, "This character is awesome.", 17, 5, "10/10/2019", "Steve" },
+                    { 38, "This character is awesome as heck.", 17, 5, "10/10/2019", "Steve" },
+                    { 18, "This character is awesome.", 18, 5, "10/10/2019", "Steve" },
+                    { 39, "This character is awesome as heck.", 18, 5, "10/10/2019", "Steve" },
+                    { 19, "This character is awesome.", 19, 5, "10/10/2019", "Steve" },
+                    { 40, "This character is awesome.", 19, 5, "10/10/2019", "Steve" },
+                    { 20, "This character is awesome.", 20, 5, "10/10/2019", "Steve" },
+                    { 41, "This character is awesome as heck.", 20, 5, "10/10/2019", "Steve" },
+                    { 12, "This character is awesome.", 12, 5, "10/10/2019", "Steve" },
+                    { 32, "This character is awesome as heck.", 11, 5, "10/10/2019", "Steve" },
+                    { 11, "This character is awesome.", 11, 5, "10/10/2019", "Steve" },
+                    { 31, "This character is awesome as heck.", 10, 5, "10/10/2019", "Steve" },
+                    { 22, "This character is awesome for real.", 1, 5, "10/10/2019", "Steve" },
+                    { 2, "This character is awesome.", 2, 5, "10/10/2019", "Steve" },
+                    { 23, "This character is awesome for real.", 2, 5, "10/10/2019", "Steve" },
+                    { 3, "This character is awesome.", 3, 5, "10/10/2019", "Steve" },
+                    { 24, "This character is awesome as heck.", 3, 5, "10/10/2019", "Steve" },
+                    { 4, "This character is awesome.", 4, 5, "10/10/2019", "Steve" },
+                    { 25, "This character is awesome as heck.", 4, 5, "10/10/2019", "Steve" },
+                    { 5, "This character is awesome.", 5, 5, "10/10/2019", "Steve" },
+                    { 21, "This character is awesome.", 21, 5, "10/10/2019", "Steve" },
+                    { 26, "This character is awesome as heck.", 5, 5, "10/10/2019", "Steve" },
+                    { 27, "This character is awesome as heck.", 6, 5, "10/10/2019", "Steve" },
+                    { 7, "This character is awesome.", 7, 5, "10/10/2019", "Steve" },
+                    { 28, "This character is awesome as heck.", 7, 5, "10/10/2019", "Steve" },
+                    { 8, "This character is awesome.", 8, 5, "10/10/2019", "Steve" },
+                    { 29, "This character is awesome as heck.", 8, 5, "10/10/2019", "Steve" },
+                    { 9, "This character is awesome.", 9, 5, "10/10/2019", "Steve" },
+                    { 30, "This character is awesome as heck.", 9, 5, "10/10/2019", "Steve" },
+                    { 10, "This character is awesome.", 10, 5, "10/10/2019", "Steve" },
+                    { 6, "This character is awesome.", 6, 5, "10/10/2019", "Steve" },
+                    { 42, "This character is awesome as heck.", 21, 5, "10/10/2019", "Steve" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -159,21 +159,21 @@ namespace SuperHeroReviews.Migrations
                 column: "UniverseModelID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Review_HeroModelID",
-                table: "Review",
+                name: "IX_Reviews_HeroModelID",
+                table: "Reviews",
                 column: "HeroModelID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Review");
+                name: "Reviews");
 
             migrationBuilder.DropTable(
                 name: "Heroes");
 
             migrationBuilder.DropTable(
-                name: "Universe");
+                name: "Universes");
         }
     }
 }
