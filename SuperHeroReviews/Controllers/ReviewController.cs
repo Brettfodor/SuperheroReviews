@@ -52,7 +52,7 @@ namespace SuperHeroReviews.Controllers
         }
 
         [HttpGet]
-        public ViewResult Create(int id)
+        public ViewResult CreateByHeroID(int id)
         {
             ViewBag.HeroModelID = id;
             return View();
