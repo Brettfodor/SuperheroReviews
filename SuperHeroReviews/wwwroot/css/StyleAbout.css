@@ -1,0 +1,26 @@
+﻿
+*
+{
+    font-family: 'Comic Sans MS';
+}
+
+.AboutUs {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1rem 0 1rem;
+    margin: 10rem 10rem;
+    border-radius: 1rem;
+    opacity: .90;
+    color: #fff;
+    font-size: 2rem;
+    background: radial-gradient(#A23645,#462e74);
+}
+
+body 
+{
+    background-image: url("../images/AboutUsPic.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
