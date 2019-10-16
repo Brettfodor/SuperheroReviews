@@ -19,34 +19,34 @@ namespace SuperHeroReviews.Repository
         }
         public int Count()
         {
-            return db.Review.Count();
+            return db.Reviews.Count();
         }
         public void Create(ReviewModel review)
         {
-            db.Review.Add(review);
+            db.Reviews.Add(review);
             db.SaveChanges();
         }
         public void Delete(ReviewModel review)
         {
-            db.Review.Remove(review);
+            db.Reviews.Remove(review);
             db.SaveChanges();
         }
         public void Edit(ReviewModel review)
         {
-            db.Review.Update(review);
+            db.Reviews.Update(review);
             db.SaveChanges();
         }
         public IEnumerable<ReviewModel> GetAll()
         {
-            return db.Review.ToList();
+            return db.Reviews.ToList();
         }
         public ReviewModel GetByID(int id)
         {
-            return db.Review.Single(p => p.ID == id);
+            return db.Reviews.Single(p => p.ID == id);
         }
         public IEnumerable<ReviewModel> GetByHeroID(int heroModelID)
         {
-            var review = db.Review.Where(p => p.HeroModelID == heroModelID);
+            var review = db.Reviews.Where(p => p.HeroModelID == heroModelID);
             return review;
         }
         public void Save()

@@ -16,30 +16,30 @@ namespace SuperHeroReviews.Repository
         }
         public int Count()
         {
-            return db.Universe.Count();
+            return db.Universes.Count();
         }
         public void Create(UniverseModel universe)
         {
-            db.Universe.Add(universe);
+            db.Universes.Add(universe);
             db.SaveChanges();
         }
         public void Delete(UniverseModel universe)
         {
-            db.Universe.Remove(universe);
+            db.Universes.Remove(universe);
             db.SaveChanges();
         }
         public void Edit(UniverseModel universe)
         {
-            db.Universe.Update(universe);
+            db.Universes.Update(universe);
             db.SaveChanges();
         }
         public IEnumerable<UniverseModel> GetAll()
         {
-            return db.Universe.ToList();
+            return db.Universes.ToList();
         }
         public UniverseModel GetByID(int id)
         {
-            return db.Universe.Single(p => p.ID == id);
+            return db.Universes.Single(p => p.ID == id);
         }
         public IEnumerable<UniverseModel> GetByHeroID(int id)
         {

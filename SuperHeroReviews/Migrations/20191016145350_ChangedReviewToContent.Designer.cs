@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Migrations
 {
     [DbContext(typeof(SuperContext))]
-    partial class SuperContextModelSnapshot : ModelSnapshot
+    [Migration("20191016145350_ChangedReviewToContent")]
+    partial class ChangedReviewToContent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

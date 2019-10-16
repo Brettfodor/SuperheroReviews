@@ -29,7 +29,7 @@
     <h2>Reviews</h2>
     @foreach (var review in Model.Reviews)
     {
-        <p>Review: <span> @review.Review</span><a href="/Review/Delete/@review.ID">Delete Review</a>
+        <p>Review: <span> @review.Content</span><a href="/Review/Delete/@review.ID">Delete Review</a>
         <a href="/Review/Edit/@review.ID">Edit Review</a></p>
         <hr />
     }

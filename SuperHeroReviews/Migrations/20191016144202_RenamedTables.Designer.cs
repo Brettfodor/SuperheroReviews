@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Migrations
 {
     [DbContext(typeof(SuperContext))]
-    partial class SuperContextModelSnapshot : ModelSnapshot
+    [Migration("20191016144202_RenamedTables")]
+    partial class RenamedTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,11 +71,11 @@ namespace SuperHeroReviews.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Content");
-
                     b.Property<int>("HeroModelID");
 
                     b.Property<int>("Rating");
+
+                    b.Property<string>("Review");
 
                     b.Property<string>("ReviewDate");
 
@@ -86,48 +88,48 @@ namespace SuperHeroReviews.Migrations
                     b.ToTable("Reviews");
 
                     b.HasData(
-                        new { ID = 1, Content = "This character is awesome.", HeroModelID = 1, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 2, Content = "This character is awesome.", HeroModelID = 2, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 3, Content = "This character is awesome.", HeroModelID = 3, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 4, Content = "This character is awesome.", HeroModelID = 4, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 5, Content = "This character is awesome.", HeroModelID = 5, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 6, Content = "This character is awesome.", HeroModelID = 6, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 7, Content = "This character is awesome.", HeroModelID = 7, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 8, Content = "This character is awesome.", HeroModelID = 8, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 9, Content = "This character is awesome.", HeroModelID = 9, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 10, Content = "This character is awesome.", HeroModelID = 10, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 11, Content = "This character is awesome.", HeroModelID = 11, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 12, Content = "This character is awesome.", HeroModelID = 12, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 13, Content = "This character is awesome.", HeroModelID = 13, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 14, Content = "This character is awesome.", HeroModelID = 14, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 15, Content = "This character is awesome.", HeroModelID = 15, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 16, Content = "This character is awesome.", HeroModelID = 16, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 17, Content = "This character is awesome.", HeroModelID = 17, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 18, Content = "This character is awesome.", HeroModelID = 18, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 19, Content = "This character is awesome.", HeroModelID = 19, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 20, Content = "This character is awesome.", HeroModelID = 20, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 21, Content = "This character is awesome.", HeroModelID = 21, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 22, Content = "This character is awesome for real.", HeroModelID = 1, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 23, Content = "This character is awesome for real.", HeroModelID = 2, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 24, Content = "This character is awesome as heck.", HeroModelID = 3, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 25, Content = "This character is awesome as heck.", HeroModelID = 4, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 26, Content = "This character is awesome as heck.", HeroModelID = 5, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 27, Content = "This character is awesome as heck.", HeroModelID = 6, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 28, Content = "This character is awesome as heck.", HeroModelID = 7, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 29, Content = "This character is awesome as heck.", HeroModelID = 8, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 30, Content = "This character is awesome as heck.", HeroModelID = 9, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 31, Content = "This character is awesome as heck.", HeroModelID = 10, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 32, Content = "This character is awesome as heck.", HeroModelID = 11, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 33, Content = "This character is awesome as heck.", HeroModelID = 12, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 34, Content = "This character is awesome as heck.", HeroModelID = 13, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 35, Content = "This character is awesome as heck.", HeroModelID = 14, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 36, Content = "This character is awesome as heck.", HeroModelID = 15, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 37, Content = "This character is awesome as heck.", HeroModelID = 16, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 38, Content = "This character is awesome as heck.", HeroModelID = 17, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 39, Content = "This character is awesome as heck.", HeroModelID = 18, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 40, Content = "This character is awesome.", HeroModelID = 19, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 41, Content = "This character is awesome as heck.", HeroModelID = 20, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" },
-                        new { ID = 42, Content = "This character is awesome as heck.", HeroModelID = 21, Rating = 5, ReviewDate = "10/10/2019", ReviewerName = "Steve" }
+                        new { ID = 1, HeroModelID = 1, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 2, HeroModelID = 2, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 3, HeroModelID = 3, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 4, HeroModelID = 4, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 5, HeroModelID = 5, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 6, HeroModelID = 6, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 7, HeroModelID = 7, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 8, HeroModelID = 8, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 9, HeroModelID = 9, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 10, HeroModelID = 10, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 11, HeroModelID = 11, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 12, HeroModelID = 12, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 13, HeroModelID = 13, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 14, HeroModelID = 14, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 15, HeroModelID = 15, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 16, HeroModelID = 16, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 17, HeroModelID = 17, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 18, HeroModelID = 18, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 19, HeroModelID = 19, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 20, HeroModelID = 20, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 21, HeroModelID = 21, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 22, HeroModelID = 1, Rating = 5, Review = "This character is awesome for real.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 23, HeroModelID = 2, Rating = 5, Review = "This character is awesome for real.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 24, HeroModelID = 3, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 25, HeroModelID = 4, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 26, HeroModelID = 5, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 27, HeroModelID = 6, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 28, HeroModelID = 7, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 29, HeroModelID = 8, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 30, HeroModelID = 9, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 31, HeroModelID = 10, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 32, HeroModelID = 11, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 33, HeroModelID = 12, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 34, HeroModelID = 13, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 35, HeroModelID = 14, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 36, HeroModelID = 15, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 37, HeroModelID = 16, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 38, HeroModelID = 17, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 39, HeroModelID = 18, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 40, HeroModelID = 19, Rating = 5, Review = "This character is awesome.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 41, HeroModelID = 20, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" },
+                        new { ID = 42, HeroModelID = 21, Rating = 5, Review = "This character is awesome as heck.", ReviewDate = "10/10/2019", ReviewerName = "Steve" }
                     );
                 });
 
