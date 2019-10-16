@@ -7,10 +7,47 @@ using SuperHeroReviews.Data;
 
 namespace SuperHeroReviews.Repository
 {
-    public class UniverseRepository : Repository<UniverseModel>
+    public class UniverseRepository : IRepository<UniverseModel>
     {
-        public UniverseRepository(SuperContext context) : base(context)
+        private SuperContext db;
+        public UniverseRepository(SuperContext db)
         {
+            this.db = db;
+        }
+        public int Count()
+        {
+            return db.Universes.Count();
+        }
+        public void Create(UniverseModel universe)
+        {
+            db.Universes.Add(universe);
+            db.SaveChanges();
+        }
+        public void Delete(UniverseModel universe)
+        {
+            db.Universes.Remove(universe);
+            db.SaveChanges();
+        }
+        public void Edit(UniverseModel universe)
+        {
+            db.Universes.Update(universe);
+            db.SaveChanges();
+        }
+        public IEnumerable<UniverseModel> GetAll()
+        {
+            return db.Universes.ToList();
+        }
+        public UniverseModel GetByID(int id)
+        {
+            return db.Universes.Single(p => p.ID == id);
+        }
+        public IEnumerable<UniverseModel> GetByHeroID(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public void Save()
+        {
+            db.SaveChanges();
         }
     }
 }

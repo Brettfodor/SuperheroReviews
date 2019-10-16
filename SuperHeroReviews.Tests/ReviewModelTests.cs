@@ -26,7 +26,7 @@ namespace SuperHeroReviews.Tests
         [Fact]
         public void CourseConstructor_Sets_Review()
         {
-            var result = herotest.Review;
+            var result = herotest.Content;
 
             Assert.Equal("review", result);
         }

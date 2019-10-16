@@ -13,8 +13,8 @@ namespace SuperHeroReviews.Controllers
     public class HeroController : Controller
     {
 
-        Repository<HeroModel> heroRepo;
-        public HeroController(Repository<HeroModel> heroRepo)
+        IRepository<HeroModel> heroRepo;
+        public HeroController(IRepository<HeroModel> heroRepo)
         {
             this.heroRepo = heroRepo;
         }
@@ -31,7 +31,7 @@ namespace SuperHeroReviews.Controllers
 
         public ViewResult Details(int id)
         {
-            var model = heroRepo.GetById(id);
+            var model = heroRepo.GetByID(id);
 
             return View(model);
         }

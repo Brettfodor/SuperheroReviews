@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SuperHeroReviews.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class thng : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
