@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace SuperHeroReviews.Models
+﻿namespace SuperHeroReviews.Models
 {
     public class ReviewModel
     {
@@ -19,7 +13,6 @@ namespace SuperHeroReviews.Models
         
         public ReviewModel()
         {
-
         }
 
         public ReviewModel(int id, string content, string reviewerName, int rating, string reviewDate, int heroModelID)

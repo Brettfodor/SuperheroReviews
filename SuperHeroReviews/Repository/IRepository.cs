@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SuperHeroReviews.Repository
 {
@@ -12,6 +9,5 @@ namespace SuperHeroReviews.Repository
         void Create(T obj);
         void Delete(T obj);
         void Edit(T obj);
-        //IEnumerable<T> GetByID(int id);
     }
 }
