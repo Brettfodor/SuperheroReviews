@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SuperHeroReviews.Models;
 using SuperHeroReviews.Repository;
 
@@ -30,19 +25,12 @@ namespace SuperHeroReviews.Controllers
             return View(model);
         }
 
-
         public ViewResult Details(int id)
         {
             var model = reviewRepo.GetByID(id);
 
             return View(model);
         }
-
-        //[HttpGet]
-        //public ViewResult Create()
-        //{
-        //    return View();
-        //}
 
         [HttpPost]
         public ActionResult Create(ReviewModel review)
@@ -71,6 +59,7 @@ namespace SuperHeroReviews.Controllers
             reviewRepo.Delete(review);
             return RedirectToAction("Details", "Hero", new { id = review.HeroModelID });
         }
+
         [HttpGet]
         public ViewResult Edit(int id)
         {

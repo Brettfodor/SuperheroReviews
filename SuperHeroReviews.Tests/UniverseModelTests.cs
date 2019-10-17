@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xunit;
 using SuperHeroReviews.Models;
 
@@ -15,8 +13,9 @@ namespace SuperHeroReviews.Tests
             herotest = new UniverseModel(21, "Universe", heroes );
 
         }
+
         [Fact]
-        public void CourseConstructor_Sets_ID()
+        public void UniverseConstructor_Sets_ID()
         {
             var result = herotest.ID;
 
@@ -25,7 +24,7 @@ namespace SuperHeroReviews.Tests
         }
 
         [Fact]
-        public void CourseConstructor_Sets_Universe()
+        public void UniverseConstructor_Sets_Universe()
         {
             var result = herotest.Universe;
 
@@ -33,13 +32,5 @@ namespace SuperHeroReviews.Tests
 
         }
 
-        [Fact]
-        public void CourseConstructor_Sets_Faction()
-        {
-            var result = herotest.Faction;
-
-            Assert.Equal("Faction", result);
-
-        }
     }
 }

@@ -10,11 +10,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/Layout.css" />
     <title>Edit</title>
 </head>
 <body>
-    <h4>ReviewModel</h4>
-    <hr />
+    <h1 id="editHeader">ReviewModel</h1>
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Edit" method="post">
@@ -49,9 +49,8 @@
             </form>
         </div>
     </div>
-
     <div>
-        <a asp-action="Index">Back to List</a>
+        <a href="/Hero/Details/@Model.ID" id="editLink" >Back to List</a>
     </div>
 </body>
 </html>

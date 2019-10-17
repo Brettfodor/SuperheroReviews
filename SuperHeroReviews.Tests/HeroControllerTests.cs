@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
 using SuperHeroReviews.Models;
 using Xunit;
 
@@ -17,9 +14,6 @@ namespace SuperHeroReviews.Tests
 
         }
             
-
-
-
         [Fact]
         public void CourseConstructor_Sets_Name_On_Course_Model()
         {
@@ -36,10 +30,6 @@ namespace SuperHeroReviews.Tests
             Assert.Equal(21, result);
 
         }
-
-
-
-
 
         [Fact]
         public void CourseConstructor_Sets_Content()
