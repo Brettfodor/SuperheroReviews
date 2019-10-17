@@ -29,5 +29,47 @@ namespace SuperHeroReviews.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(HeroModel hero)
+        {
+            heroRepo.Create(hero);
+            return RedirectToAction("HeroIndex");
+        }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            ViewBag.ID = id;
+            var model = heroRepo.GetByID(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(HeroModel hero)
+        {
+            heroRepo.Delete(hero);
+            return RedirectToAction("HeroIndex");
+        }
+
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            var model = heroRepo.GetByID(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(HeroModel hero)
+        {
+            heroRepo.Edit(hero);
+            return RedirectToAction("HeroIndex");
+        }
+
     }
 }
