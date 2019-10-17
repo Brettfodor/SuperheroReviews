@@ -14,7 +14,6 @@
 </head>
 <body>
     <h1>Hero Details</h1>
-
     <div id="detail">
         <article>
             <img src="@Model.Image" />
@@ -23,24 +22,48 @@
             <p>Title: <span>@Model.Name</span></p>
             <p>Universe: <span>@Model.Universe.Universe</span></p>
             <p>Description: <span>@Model.Content</span></p>
-
         </article>
     </div>
     <h2>Reviews</h2>
     @foreach (var review in Model.Reviews)
     {
-        <p>Review: <span> @review.Review</span></p>
-        <hr />
+        <div>
+            Review: <span> @review.Content</span>
+            <div>
+                <section id="Forms">
+                    <form action="/Review/Delete/@review.ID" method="get">
+                        <input type="submit" value="Delete Review" />
+                    </form>
+                </section>
+            </div>
+            <div>
+                <section id="Forms">
+                    <form action="/Review/Edit/@review.ID" method="get">
+                        <input type="submit" value="Edit Review" />
+                    </form>
+                </section><br />
+            </div>
+        </div>
     }
-   
-    <a href="/Hero/HeroIndex">Return to Hero List</a>
-
-
+    <br />
+    <div>
+        <section id="Forms">
+            <form action="/Review/CreateByHeroID/@Model.ID" method="get">
+                <input type="submit" value="Add Review" /><br>
+            </form>
+        </section>
+    </div>
+    <br />
+    <div>
+        <section id="Forms">
+            <form action="/Hero/HeroIndex" method="get">
+                <input type="submit" value="Return To Hero List" /><br>
+            </form>
+        </section>
+    </div>
     <nav>
-        <a href="/Home/MCU">MCU</a>
-        <a href="DCU.cshtml">DCU</a>
-        <a href="about.cshtml">About</a>
-        <a href="index.cshtml">Home</a>
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/About">About</a>
         <a href="/Hero/HeroIndex">All Heroes</a>
     </nav>
 </body>

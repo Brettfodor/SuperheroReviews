@@ -1,0 +1,28 @@
+﻿
+body {
+    background-image: url("../images/DCvsMarvelForm.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+
+}
+
+#editHeader, #editLink {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+
+
+

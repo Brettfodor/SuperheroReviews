@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using SuperHeroReviews.Models;
+﻿using SuperHeroReviews.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace SuperHeroReviews.Data
@@ -10,8 +6,8 @@ namespace SuperHeroReviews.Data
     public class SuperContext : DbContext
     {
         public DbSet<HeroModel> Heroes { get; set; }
-        public DbSet<ReviewModel> Review { get; set; }
-        public DbSet<UniverseModel> Universe { get; set; }
+        public DbSet<ReviewModel> Reviews { get; set; }
+        public DbSet<UniverseModel> Universes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -205,7 +201,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 1,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -215,7 +211,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 2,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -225,7 +221,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 3,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -236,7 +232,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 4,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -245,7 +241,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 5,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -255,7 +251,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 6,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -264,7 +260,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 7,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -274,7 +270,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 8,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -283,7 +279,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 9,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -293,7 +289,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 10,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -305,14 +301,14 @@ namespace SuperHeroReviews.Data
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     HeroModelID = 11
                 },
 
                new ReviewModel()
                {
                    ID = 12,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -321,7 +317,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 13,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -331,7 +327,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 14,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -340,7 +336,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 15,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -350,7 +346,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 16,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -359,7 +355,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 17,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -369,7 +365,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 18,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -378,7 +374,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 19,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -388,7 +384,7 @@ namespace SuperHeroReviews.Data
                new ReviewModel()
                {
                    ID = 20,
-                   Review = "This character is awesome.",
+                   Content = "This character is awesome.",
                    ReviewerName = "Steve",
                    Rating = 5,
                    ReviewDate = "10/10/2019",
@@ -398,7 +394,7 @@ namespace SuperHeroReviews.Data
                 {
                     ID = 21,
 
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -407,7 +403,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 22,
-                    Review = "This character is awesome for real.",
+                    Content = "This character is awesome for real.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -416,7 +412,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 23,
-                    Review = "This character is awesome for real.",
+                    Content = "This character is awesome for real.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -425,7 +421,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 24,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -434,7 +430,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 25,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -443,7 +439,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 26,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -452,7 +448,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 27,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -461,7 +457,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 28,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -470,7 +466,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 29,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -479,7 +475,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 30,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -488,7 +484,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 31,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -497,7 +493,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 32,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -506,7 +502,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 33,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -515,7 +511,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 34,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -524,7 +520,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 35,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -533,7 +529,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 36,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -542,7 +538,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 37,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -551,7 +547,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 38,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -560,7 +556,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 39,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -570,7 +566,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 40,
-                    Review = "This character is awesome.",
+                    Content = "This character is awesome.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -579,7 +575,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 41,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",
@@ -588,7 +584,7 @@ namespace SuperHeroReviews.Data
                 new ReviewModel()
                 {
                     ID = 42,
-                    Review = "This character is awesome as heck.",
+                    Content = "This character is awesome as heck.",
                     ReviewerName = "Steve",
                     Rating = 5,
                     ReviewDate = "10/10/2019",

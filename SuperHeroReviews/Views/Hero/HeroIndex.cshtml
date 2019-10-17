@@ -15,24 +15,19 @@
 <body>
     <h1>Hero List</h1>
     <a href="/Home/Index">Return Home</a>
-
     <div id="hero">
         @foreach (var hero in Model)
         {
-
             <article>
                 <p><a href="/Hero/Details/@hero.ID"><img src="@hero.Image"></a></p>
                 <p>Hero: @hero.Name </p>
                 <hr />
             </article>
-
         }
     </div>
     <nav>
-        <a href="/Home/MCU">MCU</a>
-        <a href="DCU.cshtml">DCU</a>
-        <a href="about.cshtml">About</a>
-        <a href="index.cshtml">Home</a>
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/About">About</a>
         <a href="/Hero/HeroIndex">All Heroes</a>
     </nav>
 </body>
