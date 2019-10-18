@@ -10,7 +10,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/css/Layout.css" />
-    <title>Create</title>
+    <title>Edit</title>
 </head>
 <body>
 
@@ -18,8 +18,9 @@
     <hr />
     <div class="row">
         <div class="col-md-4">
-            <form asp-action="Create" method="post">
+            <form asp-action="Edit" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ID" />
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="form-control" />
@@ -44,7 +45,7 @@
                     <span asp-validation-for="Universe" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Save" class="btn btn-default" />
                 </div>
             </form>
         </div>
