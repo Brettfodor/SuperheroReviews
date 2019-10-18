@@ -1,0 +1,56 @@
+﻿@model SuperHeroReviews.Models.HeroModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>HeroModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Universe)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Universe.ID)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="ID" />
+            <input type="hidden" value="@ViewBag.ID" name="ID" class="form-control" />
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</body>
+</html>

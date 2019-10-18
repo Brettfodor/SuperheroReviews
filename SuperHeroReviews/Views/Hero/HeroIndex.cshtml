@@ -15,14 +15,22 @@
 <body>
     <h1>Hero List</h1>
     <a href="/Home/Index">Return Home</a>
+  
+    <form action="/Hero/Create" method="Get">
+        <input type="submit" value="Create Hero" />
+    </form>
+   
     <div id="hero">
         @foreach (var hero in Model)
         {
-            <article>
-                <p><a href="/Hero/Details/@hero.ID"><img src="@hero.Image"></a></p>
-                <p>Hero: @hero.Name </p>
-                <hr />
-            </article>
+        <article>
+            <p><a href="/Hero/Details/@hero.ID"><img src="@hero.Image"></a></p>
+            <p>Hero: @hero.Name </p>
+            <form action="/Hero/Delete/@hero.ID" method="Get">
+                <input type="submit" value="Delete Hero" />
+            </form>
+            <hr />
+        </article>
         }
     </div>
     <nav>
