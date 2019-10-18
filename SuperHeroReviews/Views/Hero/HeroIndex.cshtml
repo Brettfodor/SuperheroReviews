@@ -26,7 +26,7 @@
         <article>
             <p><a href="/Hero/Details/@hero.ID"><img src="@hero.Image"></a></p>
             <p>Hero: @hero.Name </p>
-            <form action="/Hero/Delete" method="Get">
+            <form action="/Hero/Delete/@hero.ID" method="Get">
                 <input type="submit" value="Delete Hero" />
             </form>
             <hr />
